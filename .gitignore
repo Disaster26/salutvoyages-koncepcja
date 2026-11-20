@@ -1,3 +1,4 @@
 src.html
 *.part
 build.py
+gen.py

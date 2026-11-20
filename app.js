@@ -12,7 +12,7 @@
     links.forEach(function(l){var t=document.querySelector(l.getAttribute('href'));if(t)io.observe(t)});
     var st=document.getElementById('start');if(st)io.observe(st);
     var mob=document.getElementById('mob');
-    if(mob)new IntersectionObserver(function(es){mob.classList.toggle('widac',!es[0].isIntersecting&&es[0].boundingClientRect.top<0)},{threshold:0}).observe(document.querySelector('.hero .btn'));
+    var hb=document.querySelector('.hero .btn, .ph .btn, h1');if(mob&&hb)new IntersectionObserver(function(es){mob.classList.toggle('widac',!es[0].isIntersecting&&es[0].boundingClientRect.top<0)},{threshold:0}).observe(hb);
     var m=document.getElementById('mapa');
     if(m){var mo=new IntersectionObserver(function(es){if(es[0].isIntersecting){var f=document.createElement('iframe');f.src=m.dataset.src;f.title=m.dataset.t||'Mapa';f.loading='lazy';f.referrerPolicy='no-referrer-when-downgrade';m.appendChild(f);mo.disconnect()}},{rootMargin:'300px'});mo.observe(m)}
   }
@@ -62,5 +62,30 @@
 
   var f=document.getElementById('form'),msg=document.getElementById('msg');
   if(f)f.addEventListener('submit',function(e){e.preventDefault();var ok=true;[].forEach.call(f.querySelectorAll('[required]'),function(i){var v=i.type==='checkbox'?(i.checked?'1':''):i.value.trim();var bad=!v||(i.type==='email'&&!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(v));i.setAttribute('aria-invalid',bad);if(bad&&ok){ok=false;i.focus()}});if(!ok)return;msg.hidden=false;f.reset()});
+
+  /* menu rozwijane Wycieczki: klik (dotyk na tablecie), Escape i klik obok zamykaja */
+  var sub=document.querySelector('.menu .sub');
+  if(sub){var sb=sub.querySelector('button');
+    sb.addEventListener('click',function(e){if(innerWidth<=1080)return;var o=sub.classList.toggle('otw');sb.setAttribute('aria-expanded',o)});
+    document.addEventListener('click',function(e){if(!sub.contains(e.target)){sub.classList.remove('otw');sb.setAttribute('aria-expanded','false')}});
+    document.addEventListener('keydown',function(e){if(e.key==='Escape'){sub.classList.remove('otw');sb.setAttribute('aria-expanded','false')}});
+  }
+
+  /* filtry listy ofert */
+  var fl=document.querySelector('[data-filtry]');
+  if(fl){
+    var its=[].slice.call(document.querySelectorAll('.lista .of')),chs=[].slice.call(fl.querySelectorAll('.chip')),sel=fl.querySelector('select'),ile=fl.querySelector('.ile'),pu=document.querySelector('.pusto'),A=fl.dataset.a,Bb=fl.dataset.b;
+    function pl(n){return n===1?'oferta':(n%10>=2&&n%10<=4&&(n%100<12||n%100>14)?'oferty':'ofert')}
+    function run(){var c=(chs.filter(function(x){return x.getAttribute('aria-pressed')==='true'})[0]||chs[0]).dataset.v,v=sel.value,n=0;
+      its.forEach(function(it){var ok=(c==='*'||it.dataset[A].split('|').indexOf(c)>-1)&&(v==='*'||it.dataset[Bb].split('|').indexOf(v)>-1);it.hidden=!ok;if(ok)n++});
+      ile.textContent=n+' '+pl(n);pu.hidden=n>0}
+    function wybierz(v){var t=chs.filter(function(x){return x.dataset.v===v})[0]||chs[0];chs.forEach(function(x){x.setAttribute('aria-pressed',x===t)});return t}
+    chs.forEach(function(x){x.addEventListener('click',function(){wybierz(x.dataset.v);run()})});
+    sel.addEventListener('change',run);
+    var q=new URLSearchParams(location.search);
+    if(q.get(A)){var t=wybierz(q.get(A));if(t.scrollIntoView&&t.parentNode.scrollWidth>t.parentNode.clientWidth)t.parentNode.scrollLeft=t.offsetLeft-16}
+    if(q.get(Bb)&&sel.querySelector('option[value="'+q.get(Bb)+'"]'))sel.value=q.get(Bb);
+    run();
+  }
   var r=document.getElementById('rok');if(r)r.textContent=new Date().getFullYear();
 })();
