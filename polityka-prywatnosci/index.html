@@ -480,6 +480,10 @@ a.zn:hover b{color:var(--red)}
 .tekst li p{margin:4px 0}
 .wiecej{margin-top:28px}
 .mapa iframe{width:100%;height:100%;border:0;display:block}
+#tor-o{grid-auto-columns:calc((100% - 3*var(--gap))/4)}
+@media (max-width:1280px){#tor-o{grid-auto-columns:calc((100% - 2*var(--gap))/3)}}
+@media (max-width:900px){#tor-o{grid-auto-columns:calc((100% - var(--gap))/2.2)}}
+@media (max-width:560px){#tor-o{grid-auto-columns:80%}}
 </style>
 </head>
 <body>
@@ -497,7 +501,7 @@ a.zn:hover b{color:var(--red)}
     <a class="ikt" href="tel:+48226143302" aria-label="Zadzwoń do biura: 22 614 33 02"><svg aria-hidden="true"><use href="#i-tel"/></svg></a>
     <button class="burger" id="burger" aria-label="Otwórz menu" aria-expanded="false" aria-controls="menu"><span></span></button>
     <nav class="menu" id="menu" aria-label="Menu główne">
-      <div class="sub"><button type="button" aria-expanded="false" aria-haspopup="true">Wycieczki<svg aria-hidden="true"><use href="#i-d"/></svg></button><div class="pod"><a href="../dla-szkol/"><b>Dla szkół</b><span>wycieczki szkolne, wyjazdy projektowe, Erasmus+</span></a><a href="../dla-mlodziezy/"><b>Dla młodzieży</b><span>kolonie, obozy, zimowiska, wyjazdy językowe</span></a><a href="../dla-grup/"><b>Dla grup</b><span>nauczyciele, grupy sportowe, seniorzy, kuchnia i wino</span></a><a href="../pielgrzymki/"><b>Pielgrzymki</b><span>Lourdes, Lisieux, Fatima, Santiago</span></a><a href="../dla-firm/"><b>Dla firm</b><span>incentive, eventy, turystyka przemysłowa</span></a><a href="../dla-ciebie/"><b>Dla Ciebie</b><span>wycieczki, pobyty i spa, hotele, sport</span></a></div></div>
+      <div class="sub"><button type="button" aria-expanded="false" aria-haspopup="true">Wycieczki<svg aria-hidden="true"><use href="#i-d"/></svg></button><div class="pod"><a href="../dla-szkol/"><b>Dla szkół</b><span>wycieczki szkolne, wyjazdy projektowe, Erasmus+, zielone szkoły</span></a><a href="../dla-firm-i-grup/"><b>Dla firm i grup</b><span>incentive i eventy, nauczyciele, grupy sportowe, seniorzy, kuchnia i wino</span></a><a href="../dla-ciebie/"><b>Dla Ciebie</b><span>kolonie, obozy i wyjazdy językowe, wycieczki, pobyty i spa, hotele</span></a><a href="../pielgrzymki/"><b>Pielgrzymki</b><span>Lourdes, Lisieux, Fatima, Santiago de Compostela</span></a></div></div>
       <a href="../kierunki/">Kierunki</a>
       <a href="../bezpieczenstwo/">Bezpieczeństwo</a>
       <a href="../o-nas/">O nas</a>
@@ -519,7 +523,7 @@ a.zn:hover b{color:var(--red)}
         <a class="logo" href="../" aria-label="Salut Voyages, strona główna"><svg aria-hidden="true"><use href="#logo"/></svg></a>
         <p class="o">Biuro podróży z Warszawy, od 2006 roku. Wycieczki szkolne do Francji i krajów francuskojęzycznych, wyjazdy dla młodzieży, grup i firm - bez katalogu, od zera pod Waszą grupę.</p>
       </div>
-      <div><h3>Wycieczki</h3><ul><li><a href="../dla-szkol/">Dla szkół</a></li><li><a href="../dla-mlodziezy/">Dla młodzieży</a></li><li><a href="../dla-grup/">Dla grup</a></li><li><a href="../pielgrzymki/">Pielgrzymki</a></li><li><a href="../dla-firm/">Dla firm</a></li><li><a href="../dla-ciebie/">Dla Ciebie</a></li><li><a href="../kierunki/">Kierunki</a></li></ul></div>
+      <div><h3>Wycieczki</h3><ul><li><a href="../dla-szkol/">Dla szkół</a></li><li><a href="../dla-firm-i-grup/">Dla firm i grup</a></li><li><a href="../dla-ciebie/">Dla Ciebie</a></li><li><a href="../pielgrzymki/">Pielgrzymki</a></li><li><a href="../kierunki/">Kierunki</a></li></ul></div>
       <div><h3>Informacje</h3><ul><li><a href="../o-nas/">O nas</a></li><li><a href="../bezpieczenstwo/">Bezpieczeństwo</a></li><li><a href="../opinie/">Opinie</a></li><li><a href="../dokumenty-i-gwarancje/">Dokumenty i gwarancje</a></li><li><a href="../polityka-prywatnosci/">Polityka prywatności</a></li></ul></div>
       <div><h3>Kontakt</h3><ul><li><a href="tel:+48226143302">22 614 33 02</a></li><li><a href="mailto:info@salutvoyages.pl">info@salutvoyages.pl</a></li><li>ul. Zbożowa 13</li><li>03-253 Warszawa</li><li><a href="https://www.facebook.com/salut.voyages" rel="noopener">Facebook</a></li></ul></div>
     </div>
