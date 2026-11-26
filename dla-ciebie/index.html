@@ -4,9 +4,9 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="robots" content="noindex, nofollow" data-podglad>
-<title>Kolonie, obozy, wyjazdy językowe, wycieczki i hotele | Salut Voyages</title>
-<meta name="description" content="Dla dzieci i młodzieży: kolonie, obozy, zimowiska i wyjazdy językowe. Dla dorosłych: wycieczki, pobyty i spa, rezerwacja hoteli, wydarzenia sportowe.">
-<meta name="theme-color" content="#b00418">
+<title>Wyjazdy SPA, city break, imprezy sportowe, enoturystyka, hotele | Salut Voyages</title>
+<meta name="description" content="Wyjazdy dla Ciebie: SPA, city break, imprezy sportowe, wyjazdy kulinarne, enoturystyka, rezerwacje hoteli i parki rozrywki. Indywidualnie i szyte na miarę.">
+<meta name="theme-color" content="#6f0613">
 <link rel="icon" href="../img/favicon.svg" type="image/svg+xml">
 <link rel="preload" as="font" type="font/woff2" href="../fonts/ss3-rdzen.woff2" crossorigin>
 <style>
@@ -47,8 +47,8 @@ p{margin:0}
 .menu .tel{font-weight:700;white-space:nowrap;color:var(--red)}
 .menu .btn{min-height:50px;padding:0 24px;font-size:1rem}
 .ikt,.burger{display:none}
-@media (max-width:1320px){.menu .tel{display:none}}
-@media (max-width:1080px){
+@media (max-width:1560px){.menu .tel{display:none}}
+@media (max-width:1240px){
   .menu{position:fixed;inset:var(--hh) 0 auto 0;background:#fff;flex-direction:column;align-items:stretch;gap:0;padding:6px 16px 22px;border-top:1px solid var(--line);box-shadow:0 18px 30px rgba(23,24,28,.14);transform:translateY(-8px);opacity:0;visibility:hidden;transition:.2s;max-height:calc(100svh - var(--hh));overflow:auto}
   .top.open .menu{transform:none;opacity:1;visibility:visible}
   .menu a{padding:14px 2px;border-bottom:1px solid var(--g);font-size:1.1rem}
@@ -242,62 +242,6 @@ form .btn{margin-top:22px;position:relative}
 .lb button svg{width:28px;height:28px}
 .lb .x{top:6px;right:8px}.lb .p{left:6px;top:50%;transform:translateY(-50%)}.lb .n{right:6px;top:50%;transform:translateY(-50%)}
 @media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
-
-/* menu rozwijane: Wycieczki */
-.menu .sub{position:relative}
-.menu .sub>button{font:inherit;font-weight:600;font-size:1.02rem;background:none;border:0;padding:6px 0;color:inherit;cursor:pointer;display:inline-flex;align-items:center;gap:6px;position:relative}
-.menu .sub>button svg{width:15px;height:15px;color:var(--red);transition:transform .2s}
-.menu .sub:hover>button svg,.menu .sub.otw>button svg{transform:rotate(180deg)}
-.menu .sub>button.on::after,.menu .sub>button:hover::after{content:"";position:absolute;left:0;right:21px;bottom:-3px;border-bottom:2px dashed var(--red)}
-.menu .pod{position:absolute;top:calc(100% + 20px);left:-28px;width:600px;background:#fff;padding:12px;border-radius:3px;box-shadow:0 22px 44px rgba(23,24,28,.16),0 0 0 1px var(--line);display:grid;grid-template-columns:1fr 1fr;gap:4px;opacity:0;visibility:hidden;transform:translateY(-6px);transition:opacity .18s,transform .18s,visibility .18s}
-.menu .pod::before{content:"";position:absolute;left:0;right:0;top:-22px;height:22px}
-.menu .sub:hover .pod,.menu .sub:focus-within .pod,.menu .sub.otw .pod{opacity:1;visibility:visible;transform:none}
-.menu .pod a{display:block;padding:13px 16px 14px;border-radius:2px}
-.menu .pod a::after{display:none!important}
-.menu .pod a b{display:block;font-size:1.06rem;font-weight:700}
-.menu .pod a span{display:block;font-weight:400;font-size:.9rem;color:var(--mut);line-height:1.35;margin-top:3px}
-.menu .pod a:hover,.menu .pod a.on{background:var(--g)}
-.menu .pod a:hover b,.menu .pod a.on b{color:var(--red)}
-@media (max-width:1080px){
-  .menu .sub>button{width:100%;justify-content:space-between;padding:14px 2px;border-bottom:1px solid var(--g);font-size:1.1rem;cursor:default}
-  .menu .sub>button svg,.menu .sub>button::after{display:none}
-  .menu .pod{position:static;width:auto;box-shadow:none;padding:0 0 0 14px;opacity:1;visibility:visible;transform:none;grid-template-columns:1fr;gap:0;border-left:2px dashed rgba(176,4,24,.45);margin:4px 0 4px 4px}
-  .menu .pod::before{display:none}
-  .menu .pod a{padding:12px 4px;border-bottom:1px solid var(--g);border-radius:0}
-  .menu .pod a span{display:none}
-  .menu .pod a:hover,.menu .pod a.on{background:none;box-shadow:none;padding-left:4px}
-  .menu .pod a b{font-size:1.05rem;font-weight:600}
-}
-@media (max-width:1240px) and (min-width:1081px){.menu{gap:18px}.menu .btn{padding:0 18px}}
-
-/* pierwszy ekran: wlasciciele w Paryzu, haslo na grafitowym panelu */
-.hero{position:relative;display:grid;grid-template-columns:minmax(0,.94fr) minmax(0,1.06fr);min-height:calc(100svh - var(--hh));background:var(--ink);color:#fff;overflow:hidden}
-.hero-in{position:relative;display:flex;align-items:center;padding:clamp(40px,6vh,90px) clamp(36px,4vw,96px) clamp(40px,6vh,90px) calc((100vw - var(--w))/2)}
-.hero-in::after{content:"";position:absolute;top:22px;bottom:22px;right:18px;border-right:2px dashed rgba(229,68,88,.75)}
-.hero-t{max-width:880px}
-.hero h1{font-size:clamp(40px,3.9vw,86px);line-height:1.03}
-.hero .opis{font-size:clamp(18px,1.2vw,27px);line-height:1.5;max-width:44ch;margin-top:clamp(16px,2.2vh,26px);color:#e1e3e7}
-.hero .akcja{margin-top:clamp(26px,3.6vh,40px)}
-.hero .fakt{margin-top:clamp(18px,2.4vh,28px);font-size:.95rem;color:#c3c6cd;max-width:52ch}
-.hero .fakt b{color:#fff;font-weight:600}
-.hero .foto{position:relative;margin:0;min-height:100%}
-.hero .foto img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 46%}
-.hero .foto figcaption{position:absolute;right:14px;bottom:12px;background:rgba(23,24,28,.72);color:#fff;font-size:.82rem;line-height:1.3;padding:6px 10px;border-radius:2px}
-@media (max-height:820px) and (min-width:761px){.hero h1{font-size:clamp(36px,3.1vw,60px)}}
-@media (max-width:1080px) and (min-width:761px){.hero{grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr)}.hero h1{font-size:clamp(34px,4.4vw,46px)}}
-@media (max-width:760px){
-  .hero{display:flex;flex-direction:column}
-  .hero .foto{order:-1;flex:1 1 auto;min-height:min(60vw,31svh)}
-  .hero .foto figcaption{font-size:.74rem;right:8px;bottom:8px;padding:4px 7px}
-  .hero-in{flex:0 0 auto;padding:22px 16px 26px}
-  .hero-in::after{display:none}
-  .hero h1{font-size:clamp(28px,8vw,38px);line-height:1.08}
-  .hero .opis{font-size:16px;margin-top:12px;line-height:1.48}
-  .hero .akcja{margin-top:24px}
-  .hero .btn{width:100%}
-  .hero .fakt{font-size:14px;margin-top:14px}
-}
-@media (max-width:760px) and (max-height:700px){.hero h1{font-size:clamp(26px,7.4vw,31px)}.hero .opis{font-size:15px;line-height:1.42}.hero .fakt{display:none}.hero-in{padding-top:18px}}
 
 /* francja */
 .fr{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.05fr);gap:clamp(36px,5vw,110px);align-items:center}
@@ -494,6 +438,203 @@ a.zn:hover b{color:var(--red)}
 @media (max-width:1280px){#tor-o{grid-auto-columns:calc((100% - 2*var(--gap))/3)}}
 @media (max-width:900px){#tor-o{grid-auto-columns:calc((100% - var(--gap))/2.2)}}
 @media (max-width:560px){#tor-o{grid-auto-columns:80%}}
+
+/* szata bordowa (zamiast grafitu) */
+:root{--bordo:#6f0613;--bordo2:#56040e}
+.cta{background:var(--bordo)}
+.cta p{color:#f3d6da}
+.stopka{background:var(--bordo2);color:#f0d3d7}
+.stopka .szew{color:rgba(255,255,255,.35)}
+.st-d{color:#e5bcc2;border-top-color:rgba(255,255,255,.16)}
+/* menu z rozwijanymi grupami */
+.menu{gap:clamp(12px,1.25vw,30px)}
+.menu .sub{position:relative;display:flex;align-items:center}
+.menu .rozw{background:none;border:0;padding:8px 0 8px 3px;margin:0;color:var(--red);cursor:pointer;display:inline-grid;place-items:center;-webkit-tap-highlight-color:transparent}
+.menu .rozw svg{width:14px;height:14px;transition:transform .2s}
+.menu .sub:hover .rozw svg,.menu .sub.otw .rozw svg{transform:rotate(180deg)}
+.menu .pod{position:absolute;top:calc(100% + 18px);left:-22px;min-width:260px;background:#fff;padding:10px;border-radius:3px;box-shadow:0 22px 44px rgba(23,24,28,.16),0 0 0 1px var(--line);opacity:0;visibility:hidden;transform:translateY(-6px);transition:opacity .18s,transform .18s,visibility .18s;z-index:5}
+.menu .pod::before{content:"";position:absolute;left:0;right:0;top:-20px;height:20px}
+.menu .sub:hover .pod,.menu .sub:focus-within .pod,.menu .sub.otw .pod{opacity:1;visibility:visible;transform:none}
+.menu .pod a{display:block;padding:9px 14px;border-radius:2px;font-weight:600;font-size:.98rem;line-height:1.3}
+.menu .pod a::after{display:none!important}
+.menu .pod a:hover{background:var(--g);color:var(--red)}
+.menu .pod .kt{display:block;padding:6px 14px 6px;font-size:.84rem;color:var(--mut);font-weight:700}
+.menu .pod.mega{display:grid;grid-template-columns:220px 460px 220px;gap:0 10px;padding:16px 12px}
+.menu .pod .kol{display:block;min-width:0}
+@media (min-width:1241px){.top .wrap{position:relative}.menu .sub.ma{position:static}.menu .pod.mega{left:auto;right:0;top:calc(100% - 4px)}}
+.menu .pod .kraje .lk{columns:2;column-gap:10px;display:block}
+.menu .pod .kraje .lk a{break-inside:avoid}
+.menu .gl.on{color:var(--red)}
+@media (max-width:1240px){
+  .menu{max-height:calc(100svh - var(--hh));overflow-y:auto}
+  .menu .sub{display:grid;grid-template-columns:minmax(0,1fr) 52px;border-bottom:1px solid var(--g)}
+  .menu .sub>.gl{border-bottom:0}
+  .menu .rozw{width:52px;height:50px;padding:0;justify-self:end}
+  .menu .rozw svg{width:18px;height:18px}
+  .menu .pod,.menu .pod.mega{position:static;grid-column:1/-1;display:none;opacity:1;visibility:visible;transform:none;box-shadow:none;padding:0 0 10px 14px;min-width:0;width:auto;border-left:2px dashed rgba(176,4,24,.45);margin:0 0 10px 4px;border-radius:0}
+  .menu .sub.otw .pod,.menu .sub.otw .pod.mega{display:block}
+  .menu .pod a{padding:10px 4px;border-bottom:0;font-size:1rem}
+  .menu .pod a:hover{background:none}
+  .menu .pod .kt{padding:12px 4px 2px}
+  .menu .gl.on{box-shadow:inset 3px 0 0 var(--red);padding-left:14px}
+}
+
+/* pierwszy ekran: Paryz noca, haslo na zdjeciu */
+.hero{position:relative;display:flex;align-items:center;min-height:calc(100svh - var(--hh));background:var(--bordo);color:#fff;overflow:hidden}
+.hero .tlo{position:absolute;inset:0;margin:0}
+.hero .tlo img{width:100%;height:100%;object-fit:cover;object-position:50% 55%}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(86,4,14,0) 22%,rgba(86,4,14,.5) 50%,rgba(86,4,14,.9) 100%);pointer-events:none}
+.hero-in{position:relative;z-index:1;width:var(--w);margin:0 auto;display:flex;justify-content:flex-end;padding:clamp(40px,8vh,110px) 0}
+.hero-t{width:min(760px,48%)}
+.hero h1{font-size:clamp(40px,3.7vw,82px);line-height:1.04}
+.hero .opis{font-size:clamp(18px,1.2vw,26px);line-height:1.5;max-width:44ch;margin-top:clamp(16px,2.2vh,26px);color:#fbe9eb}
+.hero .akcja{margin-top:clamp(26px,3.6vh,40px);display:flex;gap:12px 14px;flex-wrap:wrap}
+.hero .fakt{margin-top:clamp(18px,2.4vh,28px);font-size:.95rem;color:#f3cfd4;max-width:52ch}
+.hero .fakt b{color:#fff;font-weight:600}
+.hero .kred{position:absolute;left:14px;bottom:10px;z-index:1;font-size:.72rem;color:rgba(255,255,255,.72)}
+.btn.obw{background:transparent;box-shadow:inset 0 0 0 2px #fff}.btn.obw::before{display:none}.btn.obw:hover{background:rgba(255,255,255,.12)}
+@media (max-height:820px) and (min-width:761px){.hero h1{font-size:clamp(36px,3vw,58px)}}
+@media (max-width:1100px) and (min-width:761px){.hero-t{width:min(560px,58%)}.hero h1{font-size:clamp(34px,4.4vw,46px)}}
+@media (max-width:760px){
+  .hero{align-items:flex-end}
+  .hero .tlo img{object-position:50% 0}
+  .hero::after{background:linear-gradient(0deg,var(--bordo) 0%,rgba(111,6,19,.9) 40%,rgba(111,6,19,0) 68%)}
+  .hero-in{padding:0 0 24px}
+  .hero-t{width:auto}
+  .hero h1{font-size:clamp(29px,8.2vw,38px);line-height:1.08}
+  .hero .opis{font-size:16px;margin-top:12px;line-height:1.48}
+  .hero .akcja{margin-top:24px}
+  .hero .btn{width:100%}
+  .hero .fakt{font-size:14px;margin-top:14px}
+  .hero .kred{top:8px;bottom:auto;left:auto;right:10px}
+}
+@media (max-width:760px) and (max-height:700px){.hero h1{font-size:clamp(26px,7.4vw,31px)}.hero .opis{font-size:15px;line-height:1.42}.hero .fakt{display:none}.hero .akcja .obw{display:none}}
+
+/* podpisy autorow zdjec */
+.ph .wrap>div{min-width:0}
+@media (max-width:900px){.ph .wrap{grid-template-columns:minmax(0,1fr)}}
+.menu .sub:nth-last-of-type(1) .pod{left:auto;right:-10px}
+.zdj{position:relative}
+.kred{display:block}
+figure .kred,.zdj .kred{position:absolute;right:8px;bottom:8px;background:rgba(23,24,28,.62);color:#fff;font-size:.7rem;line-height:1.3;padding:3px 7px;border-radius:2px;max-width:calc(100% - 16px)}
+
+/* kafle grup na stronie glownej */
+.dla{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:var(--gap)}
+.dla .kar img{aspect-ratio:3/4}
+@media (max-width:1280px){.dla{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media (max-width:760px){.dla{grid-template-columns:repeat(2,minmax(0,1fr))}.dla .metka{left:8px;right:8px;bottom:8px;padding:10px 11px 11px}.dla .metka span{display:none}}
+
+/* bloki kategorii (kotwice z menu) */
+.blok{scroll-margin-top:calc(var(--hh) + 10px)}
+.blok .dwie{align-items:center}
+.blok.lewo .dwie>figure{order:-1}
+.blok figure{margin:0;border-radius:3px;overflow:hidden;position:relative}
+.blok figure img{width:100%;aspect-ratio:4/3;object-fit:cover}
+.blok h2{font-size:clamp(30px,2.6vw,50px)}
+.blok .lead{color:var(--mut);margin-top:16px;max-width:62ch}
+.blok .lead+.lead{margin-top:12px}
+.blok .pod-k{margin-top:22px}
+.blok .btn{margin-top:26px}
+@media (max-width:1000px){.blok.lewo .dwie>figure{order:0}}
+@media (max-width:560px){.blok .btn{width:100%}}
+.spis{display:flex;flex-wrap:wrap;gap:8px;margin-top:clamp(20px,2vw,30px)}
+.spis a{display:inline-flex;align-items:center;min-height:44px;padding:0 16px;border:1.5px solid #c9cdd5;border-radius:3px;background:#fff;text-decoration:none;font-weight:600;font-size:.96rem}
+.spis a:hover{border-color:var(--red);color:var(--red)}
+@media (max-width:760px){.spis{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;margin-left:-16px;margin-right:-16px;padding:0 16px 2px}.spis::-webkit-scrollbar{display:none}.spis a{flex:none}}
+
+/* Polska: 1-2 dni, 3-5 dni, kierunki */
+.pl3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:var(--gap);margin-top:clamp(28px,3vw,46px)}
+.pl3>div{position:relative;background:#fff;border-radius:3px;padding:clamp(22px,2vw,34px);scroll-margin-top:calc(var(--hh) + 16px)}
+.pl3>div::before,.kraj::before{content:"";position:absolute;inset:7px;border:1.5px dashed rgba(176,4,24,.38);border-radius:2px;pointer-events:none}
+.pl3 h3,.kraj h3{font-size:clamp(22px,1.5vw,28px)}
+.pl3 p,.kraj p{color:var(--mut);margin-top:8px;font-size:.97rem;line-height:1.5}
+.pl3 ul,.kraj ul{list-style:none;margin:14px 0 0;padding:12px 0 0;border-top:1.5px dashed rgba(176,4,24,.35)}
+.pl3 li,.kraj li{padding:4px 0;font-weight:600;font-size:.97rem;line-height:1.35}
+.kraj li a{color:var(--red)}
+.tagi{display:flex;flex-wrap:wrap;gap:6px;margin-top:14px}
+.tagi span{font-size:.9rem;font-weight:600;padding:5px 10px;background:var(--g);border-radius:2px}
+@media (max-width:1000px){.pl3{grid-template-columns:1fr}}
+
+/* kraje */
+.kraje{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:var(--gap)}
+.kraj{position:relative;background:var(--g);border-radius:3px;padding:clamp(22px,2vw,34px);scroll-margin-top:calc(var(--hh) + 16px)}
+.sek.szary .kraj{background:#fff}
+.kraj .gdzie{display:block;font-size:.88rem;color:var(--red);font-weight:700;margin-top:4px}
+.kraj.fr{grid-column:1/-1;display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:clamp(24px,3vw,56px);align-items:center;background:var(--red);color:#fff}
+.kraj.fr::before{border-color:rgba(255,255,255,.5)}
+.kraj.fr h3{font-size:clamp(28px,2.4vw,46px)}
+.kraj.fr p{color:#fbe3e6;font-size:1.02rem}
+.kraj.fr ul{border-top-color:rgba(255,255,255,.45);columns:2;column-gap:24px}
+.kraj.fr li{break-inside:avoid}
+.kraj.fr .btn{margin-top:22px}
+.kraj.fr figure{margin:0;border-radius:2px;overflow:hidden;position:relative}
+.kraj.fr figure img{width:100%;aspect-ratio:4/3;object-fit:cover}
+@media (max-width:1100px){.kraje{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:760px){.kraje{grid-template-columns:1fr}.kraj.fr{grid-template-columns:1fr}.kraj.fr ul{columns:1}.kraj.fr .btn{width:100%}}
+
+/* oferta: wszystkie uslugi */
+.usl{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:var(--gap)}
+.us{position:relative;display:flex;flex-direction:column;background:#fff;border-radius:3px;padding:clamp(20px,1.8vw,30px);text-decoration:none;color:var(--ink);box-shadow:0 0 0 1px var(--line);transition:box-shadow .2s}
+.us:hover{box-shadow:0 0 0 1px var(--line),0 14px 30px rgba(23,24,28,.1)}
+.us b{font-size:clamp(19px,1.2vw,23px);line-height:1.2}
+.us span{color:var(--mut);font-size:.95rem;line-height:1.45;margin-top:8px}
+.us i{font-style:normal;margin-top:auto;padding-top:14px;font-weight:700;color:var(--red);font-size:.9rem}
+.us:hover b{color:var(--red)}
+.usl-g h2{font-size:clamp(24px,1.8vw,34px);margin:clamp(36px,3.4vw,56px) 0 18px}
+.usl-g h2:first-child{margin-top:0}
+@media (max-width:1280px){.usl{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media (max-width:900px){.usl{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:560px){.usl{grid-template-columns:1fr}}
+
+/* aktualne wyjazdy */
+.akt{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:var(--gap)}
+.akt .of img{aspect-ratio:3/2}
+.of .cena{margin-top:auto;padding-top:16px;display:flex;align-items:baseline;justify-content:space-between;gap:10px}
+.of .cena b{font-size:clamp(22px,1.5vw,28px);color:var(--red);font-weight:800}
+.of .cena span{font-weight:700;font-size:.92rem}
+.of.wkr{pointer-events:none}
+.of.wkr .tg{color:var(--mut)}
+@media (max-width:1100px){.akt{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:620px){.akt{grid-template-columns:1fr}.akt .of{display:flex}.akt .of .im{margin:0;border-radius:0}.akt .of img{aspect-ratio:3/2}.akt .of .tg{display:block}}
+
+/* planer zapytania (zamiast zwyklego formularza) */
+.plan{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,.8fr);gap:clamp(28px,4vw,80px);align-items:start}
+.plan .lead{color:var(--mut);margin-top:14px;max-width:56ch}
+.plan form{margin-top:clamp(22px,2.4vw,34px)}
+fieldset{border:0;margin:0 0 20px;padding:0;min-width:0;position:relative}
+legend{font-weight:700;font-size:1.02rem;padding:0;margin-bottom:10px}
+.wyb{display:flex;flex-wrap:wrap;gap:8px}
+.wyb input{position:absolute;opacity:0;width:1px;height:1px}
+.wyb label{display:inline-flex;align-items:center;min-height:46px;padding:0 16px;margin:0;border:1.5px solid #c9cdd5;border-radius:3px;background:#fff;font-weight:600;font-size:.97rem;cursor:pointer;transition:background .15s,border-color .15s,color .15s}
+.wyb label:hover{border-color:var(--red);color:var(--red)}
+.wyb input:checked+label{background:var(--red);border-color:var(--red);color:#fff}
+.wyb input:focus-visible+label{outline:3px solid #f2b8bf;outline-offset:2px}
+.pola.trzy{grid-template-columns:repeat(3,minmax(0,1fr))}
+.plan .pola+.pola{margin-top:16px}
+.bilet{position:sticky;top:calc(var(--hh) + 24px);background:#fff;border-radius:3px;padding:clamp(22px,2vw,34px);box-shadow:0 18px 40px rgba(23,24,28,.10)}
+.bilet::before{content:"";position:absolute;inset:8px;border:1.5px dashed rgba(176,4,24,.38);border-radius:2px;pointer-events:none}
+.b-top{display:flex;align-items:center;justify-content:space-between;gap:12px;color:var(--red)}
+.b-top svg{width:130px;height:44px}
+.b-top span{font-size:.85rem;font-weight:700;color:var(--mut)}
+.b-tyt{font-size:clamp(20px,1.4vw,26px);font-weight:700;line-height:1.25;margin-top:18px}
+.bilet dl{display:grid;grid-template-columns:auto minmax(0,1fr);gap:8px 16px;margin:16px 0 0;font-size:.97rem}
+.bilet dt{color:var(--mut)}.bilet dd{margin:0;font-weight:600}
+.b-cut{position:relative;margin:20px calc(-1*clamp(22px,2vw,34px));border-top:2px dashed var(--line)}
+.b-cut::before,.b-cut::after{content:"";position:absolute;top:-12px;width:22px;height:22px;border-radius:50%;background:var(--g)}
+.b-cut::before{left:-11px}.b-cut::after{right:-11px}
+.sek:not(.szary) .b-cut::before,.sek:not(.szary) .b-cut::after{background:#fff}
+.b-inc b{display:block;margin-bottom:6px}
+.b-inc ul{margin:0;padding-left:18px;color:var(--mut);font-size:.95rem}
+.b-inc li{margin:4px 0}
+@media (max-width:1000px){.plan{grid-template-columns:1fr}.bilet{position:static}}
+@media (max-width:560px){.pola.trzy{grid-template-columns:1fr 1fr}.pola.trzy>div:last-child{grid-column:1/-1}.plan form .btn{width:100%}.wyb label{min-height:44px;padding:0 13px;font-size:.94rem}}
+
+/* kontakt bez formularza */
+.kon2{display:grid;grid-template-columns:minmax(0,.95fr) minmax(0,1.05fr);gap:clamp(36px,5vw,110px);align-items:start}
+.kon2 .mapa{margin-top:0;aspect-ratio:4/3}
+.kon2 .ramka{margin-top:clamp(28px,3vw,44px)}
+.dane li.wyr a{font-size:clamp(22px,1.6vw,30px);color:var(--red)}
+@media (max-width:1000px){.kon2{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -508,32 +649,19 @@ a.zn:hover b{color:var(--red)}
 <header class="top" id="top">
   <div class="wrap">
     <a class="logo" href="../" aria-label="Salut Voyages - biuro podróży, strona główna"><svg aria-hidden="true"><use href="#logo"/></svg></a>
-    <a class="ikt" href="tel:+48226143302" aria-label="Zadzwoń do biura: 22 614 33 02"><svg aria-hidden="true"><use href="#i-tel"/></svg></a>
+    <a class="ikt" href="tel:+48512454040" aria-label="Zadzwoń: 512 45 40 40"><svg aria-hidden="true"><use href="#i-tel"/></svg></a>
     <button class="burger" id="burger" aria-label="Otwórz menu" aria-expanded="false" aria-controls="menu"><span></span></button>
     <nav class="menu" id="menu" aria-label="Menu główne">
-      <div class="sub"><button type="button" class="on" aria-expanded="false" aria-haspopup="true">Wycieczki<svg aria-hidden="true"><use href="#i-d"/></svg></button><div class="pod"><a href="../dla-szkol/"><b>Dla szkół</b><span>wycieczki szkolne, wyjazdy projektowe, Erasmus+, zielone szkoły</span></a><a href="../dla-firm-i-grup/"><b>Dla firm i grup</b><span>incentive i eventy, nauczyciele, grupy sportowe, seniorzy, kuchnia i wino</span></a><a href="../dla-ciebie/" class="on" aria-current="page"><b>Dla Ciebie</b><span>kolonie, obozy i wyjazdy językowe, wycieczki, pobyty i spa, hotele</span></a><a href="../pielgrzymki/"><b>Pielgrzymki</b><span>Lourdes, Lisieux, Fatima, Santiago de Compostela</span></a></div></div>
-      <a href="../kierunki/">Kierunki</a>
-      <a href="../bezpieczenstwo/">Bezpieczeństwo</a>
-      <a href="../o-nas/">O nas</a>
-      <a href="../opinie/">Opinie</a>
+      <div class="sub"><a class="gl" href="../oferta/">Oferta</a><button type="button" class="rozw" aria-expanded="false" aria-label="Rozwiń: Oferta"><svg aria-hidden="true"><use href="#i-d"/></svg></button><div class="pod"><a href="../oferta/#szkoly">Wycieczki szkolne i zielone szkoły</a><a href="../oferta/#mlodziez">Kolonie, obozy, zimowiska, językowe</a><a href="../oferta/#grupy">Wycieczki objazdowe i pielgrzymki</a><a href="../oferta/#firmy">MICE i wyjazdy firmowe</a><a href="../oferta/#indywidualnie">City break, narty, hotele, sport</a><a href="../oferta/#uslugi">Ubezpieczenia i inne usługi</a></div></div><div class="sub ma"><a class="gl" href="../dla-szkol/">Dla szkół</a><button type="button" class="rozw" aria-expanded="false" aria-label="Rozwiń: Dla szkół"><svg aria-hidden="true"><use href="#i-d"/></svg></button><div class="pod mega"><div class="kol"><span class="kt">Polska</span><div class="lk"><a href="../dla-szkol/#polska-1-2">Wycieczki 1-2 dni</a><a href="../dla-szkol/#polska-3-5">Wycieczki 3-5 dni</a><a href="../dla-szkol/#polska-kierunki">Kierunki w Polsce</a></div></div><div class="kol kraje"><span class="kt">Wycieczki zagraniczne</span><div class="lk"><a href="../dla-szkol/#francja">Francja</a><a href="../dla-szkol/#belgia">Belgia</a><a href="../dla-szkol/#luksemburg">Luksemburg</a><a href="../dla-szkol/#szwajcaria">Szwajcaria</a><a href="../dla-szkol/#austria">Austria</a><a href="../dla-szkol/#balkany">Bałkany i Rumunia</a><a href="../dla-szkol/#czechy">Czechy i Słowacja</a><a href="../dla-szkol/#dania">Dania i Szwecja</a><a href="../dla-szkol/#hiszpania">Hiszpania i Portugalia</a><a href="../dla-szkol/#holandia">Holandia</a><a href="../dla-szkol/#baltyckie">Kraje bałtyckie i Norwegia</a><a href="../dla-szkol/#niemcy">Niemcy</a><a href="../dla-szkol/#wegry">Węgry</a><a href="../dla-szkol/#wielka-brytania">Wielka Brytania i Malta</a><a href="../dla-szkol/#wlochy">Włochy</a></div></div><div class="kol"><span class="kt">Więcej</span><div class="lk"><a href="../dla-szkol/#projektowe">Wycieczki projektowe</a><a href="../dla-szkol/#erasmus">Erasmus+</a><a href="../dla-szkol/#nauczyciele">Dla nauczycieli</a></div></div></div></div><div class="sub"><a class="gl" href="../dla-firm/">Dla firm</a><button type="button" class="rozw" aria-expanded="false" aria-label="Rozwiń: Dla firm"><svg aria-hidden="true"><use href="#i-d"/></svg></button><div class="pod"><a href="../dla-firm/#eventy">Eventy</a><a href="../dla-firm/#kolacje">Kolacje i imprezy firmowe</a><a href="../dla-firm/#incentive">Wyjazdy firmowe i incentive</a></div></div><div class="sub"><a class="gl" href="../dla-grup/">Dla grup</a><button type="button" class="rozw" aria-expanded="false" aria-label="Rozwiń: Dla grup"><svg aria-hidden="true"><use href="#i-d"/></svg></button><div class="pod"><a href="../dla-grup/#sportowe">Grupy sportowe</a><a href="../dla-grup/#seniorzy">Seniorzy</a><a href="../dla-grup/#pielgrzymki">Pielgrzymki</a><a href="../dla-grup/#znajomi">Znajomi i rodziny</a><a href="../dla-grup/#mlodziez">Młodzież</a><a href="../dla-grup/#20-30">Młodzi 20 & 30s</a></div></div><div class="sub"><a class="gl on" href="../dla-ciebie/" aria-current="page">Dla Ciebie</a><button type="button" class="rozw" aria-expanded="false" aria-label="Rozwiń: Dla Ciebie"><svg aria-hidden="true"><use href="#i-d"/></svg></button><div class="pod"><a href="../dla-ciebie/#spa">Wyjazdy SPA</a><a href="../dla-ciebie/#city-break">City break</a><a href="../dla-ciebie/#sport">Imprezy sportowe</a><a href="../dla-ciebie/#kulinarne">Wyjazdy kulinarne</a><a href="../dla-ciebie/#enoturystyka">Enoturystyka</a><a href="../dla-ciebie/#hotele">Rezerwacje hoteli</a><a href="../dla-ciebie/#parki">Parki rozrywki</a></div></div><div class="sub"><a class="gl" href="../aktualne-wyjazdy/">Aktualne wyjazdy</a><button type="button" class="rozw" aria-expanded="false" aria-label="Rozwiń: Aktualne wyjazdy"><svg aria-hidden="true"><use href="#i-d"/></svg></button><div class="pod"><a href="../aktualne-wyjazdy/majowka-w-holandii/">Majówka w Holandii</a><a href="../aktualne-wyjazdy/istria-trio/">Chorwacja - Istria</a><a href="../aktualne-wyjazdy/#menton">Święto cytryny w Mentonie</a></div></div>
       <a href="../kontakt/">Kontakt</a>
-      <a class="tel" href="tel:+48226143302">22 614 33 02</a>
-      <a class="btn" href="../kontakt/">Zapytaj o wyjazd</a>
+      <a class="tel" href="tel:+48512454040">512 45 40 40</a>
+      <a class="btn" href="../zapytaj/">Zapytaj o wyjazd</a>
     </nav>
   </div>
 </header>
 <main id="tresc">
-<section class="ph" aria-labelledby="h1"><div class="wrap"><div><nav class="okr" aria-label="Okruszki"><a href="../">Strona główna</a><span aria-hidden="true">/</span><a href="../kierunki/">Wycieczki</a><span aria-hidden="true">/</span><b>Wyjazdy dla Ciebie</b></nav><h1 id="h1">Wyjazdy dla Ciebie</h1><p class="lead">Kolonie, obozy i wyjazdy językowe dla dzieci i młodzieży, a dla dorosłych wycieczki, pobyty i spa, hotele i wydarzenia sportowe. Wszystko, na co zapisujecie się indywidualnie, a nie całą klasą czy firmą.</p><div class="akcja"><a class="btn" href="../kontakt/">Zapytaj o wyjazd</a></div></div><figure class="zdj"><img src="../img/f-strasburg-600.webp" srcset="../img/f-strasburg-600.webp 600w, ../img/f-strasburg-900.webp 900w, ../img/f-strasburg-1200.webp 1200w" sizes="(max-width:900px) 92vw, 46vw" width="600" height="800" alt="Kwiaty nad kanałem w dzielnicy Petite France w Strasburgu" fetchpriority="high"></figure></div></section><section class="sek" aria-label="Oferty"><div class="wrap"><nav class="kn" aria-label="Kategorie wycieczek"><a href="../dla-szkol/">Dla szkół</a><a href="../dla-firm-i-grup/">Dla firm i grup</a><a href="../dla-ciebie/" class="on" aria-current="page">Dla Ciebie</a><a href="../pielgrzymki/">Pielgrzymki</a><a href="../kierunki/">Wszystkie kierunki</a></nav><div class="filtry" data-filtry data-a="r" data-b="k"><div class="chipy" role="group" aria-label="Rodzaj wyjazdu"><button type="button" class="chip" data-v="*" aria-pressed="true">Wszystkie</button><button type="button" class="chip" data-v="jezykowe" aria-pressed="false">Wyjazdy językowe</button><button type="button" class="chip" data-v="kolonie" aria-pressed="false">Kolonie i obozy</button><button type="button" class="chip" data-v="zimowiska" aria-pressed="false">Zimowiska</button><button type="button" class="chip" data-v="narty" aria-pressed="false">Narty</button><button type="button" class="chip" data-v="objazdowe" aria-pressed="false">Wycieczki objazdowe</button><button type="button" class="chip" data-v="citybreak" aria-pressed="false">City break</button><button type="button" class="chip" data-v="hotele" aria-pressed="false">Hotele</button></div><div class="fprawo"><label for="f-sel">Kierunek</label><select id="f-sel"><option value="*">wszystkie</option><option value="francja">Francja</option><option value="szwajcaria">Szwajcaria</option><option value="wlochy">Włochy</option><option value="polska">Polska</option><option value="europa">Cała Europa</option></select><span class="ile" aria-live="polite"></span></div></div>
-<div class="lista"><a class="of" href="../kontakt/" data-r="jezykowe|kolonie" data-k="polska" data-c="dla-ciebie"><div class="im"><img src="../img/k-jezykowe-480.webp" srcset="../img/k-jezykowe-480.webp 480w, ../img/k-jezykowe-640.webp 640w" sizes="(max-width:620px) 92vw, (max-width:1100px) 46vw, (max-width:1600px) 31vw, 23vw" width="480" height="600" loading="lazy" alt="Uczestnicy obozu językowego English camp"><span class="tg">Wyjazdy językowe</span></div><div class="tr"><h3>Obóz językowy English camp</h3><p>Codzienne zajęcia z lektorami, warsztaty i wycieczki - dla młodzieży 12-17 lat.</p><dl><dt>Kierunek</dt><dd>Polska</dd><dt>Czas</dt><dd>10 dni</dd><dt>Termin</dt><dd>lipiec</dd><dt>Cena</dt><dd>wycena pod Waszą grupę</dd></dl></div></a><a class="of" href="../kontakt/" data-r="kolonie|jezykowe" data-k="francja" data-c="dla-ciebie"><div class="im"><img src="../img/g-lazurowe-700.webp" srcset="../img/g-lazurowe-700.webp 700w, ../img/g-lazurowe-1200.webp 1200w" sizes="(max-width:620px) 92vw, (max-width:1100px) 46vw, (max-width:1600px) 31vw, 23vw" width="700" height="525" loading="lazy" alt="Młodzież na punkcie widokowym nad morzem na Lazurowym Wybrzeżu"><span class="tg">Kolonie i obozy</span></div><div class="tr"><h3>Obóz we Francji</h3><p>Lato na Lazurowym Wybrzeżu i w Paryżu, z francuskim na co dzień i opieką kadry przez cały czas.</p><dl><dt>Kierunek</dt><dd>Francja</dd><dt>Czas</dt><dd>wg programu</dd><dt>Termin</dt><dd>lipiec</dd><dt>Cena</dt><dd>wycena pod Waszą grupę</dd></dl></div></a><a class="of" href="../kontakt/" data-r="zimowiska|narty" data-k="francja" data-c="dla-ciebie"><div class="im"><img src="../img/k-zimowiska-480.webp" srcset="../img/k-zimowiska-480.webp 480w, ../img/k-zimowiska-640.webp 640w" sizes="(max-width:620px) 92vw, (max-width:1100px) 46vw, (max-width:1600px) 31vw, 23vw" width="480" height="600" loading="lazy" alt="Grupa na stoku podczas zimowiska"><span class="tg">Zimowiska</span></div><div class="tr"><h3>Zimowisko w Alpach</h3><p>Narty i snowboard z instruktorami, do wyboru wersja z zajęciami z francuskiego.</p><dl><dt>Kierunek</dt><dd>Francja</dd><dt>Czas</dt><dd>8 dni, autokar</dd><dt>Termin</dt><dd>ferie zimowe</dd><dt>Cena</dt><dd>wycena pod Waszą grupę</dd></dl></div></a><a class="of" href="../kontakt/" data-r="objazdowe" data-k="wlochy|szwajcaria" data-c="dla-firm-i-grup|dla-ciebie"><div class="im"><img src="../img/k-objazdowe-480.webp" srcset="../img/k-objazdowe-480.webp 480w, ../img/k-objazdowe-640.webp 640w" sizes="(max-width:620px) 92vw, (max-width:1100px) 46vw, (max-width:1600px) 31vw, 23vw" width="480" height="600" loading="lazy" alt="Czerwony pociąg Bernina Express na wiadukcie w Alpach"><span class="tg">Wycieczki objazdowe</span></div><div class="tr"><h3>Bernina Express i jeziora włoskie</h3><p>Przejazd słynną koleją przez Alpy, Como, Lugano i St. Moritz.</p><dl><dt>Kierunek</dt><dd>Włochy, Szwajcaria</dd><dt>Czas</dt><dd>5 dni, autokar i kolej</dd><dt>Termin</dt><dd>maj - październik</dd><dt>Cena</dt><dd>wycena pod Waszą grupę</dd></dl><p class="tez"><b>Także w:</b> Dla firm i grup</p></div></a><a class="of" href="../kontakt/" data-r="citybreak" data-k="francja" data-c="dla-ciebie"><div class="im"><img src="../img/g-etretat-700.webp" width="700" height="525" loading="lazy" alt="Klify w Étretat w Normandii"><span class="tg">City break</span></div><div class="tr"><h3>Weekend w Normandii</h3><p>Klify Étretat, port w Honfleur i Rouen - dla par i rodzin, w Waszym tempie.</p><dl><dt>Kierunek</dt><dd>Francja</dd><dt>Czas</dt><dd>4 dni, samolot</dd><dt>Termin</dt><dd>kwiecień - październik</dd><dt>Cena</dt><dd>wycena pod Waszą grupę</dd></dl></div></a><a class="of" href="../kontakt/" data-r="hotele" data-k="europa" data-c="dla-ciebie|dla-firm-i-grup"><div class="im"><img src="../img/k-hotele-480.webp" srcset="../img/k-hotele-480.webp 480w, ../img/k-hotele-640.webp 640w" sizes="(max-width:620px) 92vw, (max-width:1100px) 46vw, (max-width:1600px) 31vw, 23vw" width="480" height="600" loading="lazy" alt="Hotelowy basen kryty"><span class="tg">Hotele</span></div><div class="tr"><h3>Rezerwacja hotelu</h3><p>Wybieramy i rezerwujemy hotel w dobrej lokalizacji - dla osób prywatnych, firm i grup.</p><dl><dt>Kierunek</dt><dd>Cała Europa</dd><dt>Czas</dt><dd>dowolna długość</dd><dt>Termin</dt><dd>dowolny</dd><dt>Cena</dt><dd>wycena pod Waszą grupę</dd></dl><p class="tez"><b>Także w:</b> Dla firm i grup</p></div></a></div>
-<p class="pusto" hidden>Nie mamy jeszcze takiej oferty na stronie - napisz, ułożymy program od nowa.</p>
-<p class="uwaga">Oferty powyżej to przykłady przeniesione z obecnej strony. Każdą ofertę biuro dodaje i zmienia w panelu: tytuł, zdjęcia, termin, cena, program dzień po dniu i kategorie - jedna oferta może być w kilku kategoriach naraz.</p></div></section><section class="sek szary" aria-labelledby="h-dc"><div class="wrap dwie"><div><h2 id="h-dc">Dla dorosłych</h2><p class="lead">Nie musicie być grupą, żeby jechać z nami. Napiszcie, dokąd i kiedy - resztę ułożymy.</p></div>
-<div><ul class="pod-k"><li><b>Wycieczki</b><span>city breaki w Paryżu, Nicei, Rzymie czy Wiedniu</span></li><li><b>Pobyty i spa</b><span>odpoczynek w sprawdzonych hotelach</span></li><li><b>Rezerwacja hoteli</b><span>w dobrej lokalizacji, dla osób prywatnych i firm</span></li><li><b>Wydarzenia sportowe</b><span>bilety i wyjazdy na mecze, turnieje i Formułę 1</span></li><li><b>Narty w Alpach</b><span>zimą dla rodzin i znajomych</span></li></ul></div></div></section>
-<section class="sek" aria-labelledby="h-op"><div class="wrap dwie"><div>
-<h2 id="h-op">Kolonie i obozy: jak opiekujemy się dziećmi</h2>
-<p class="lead">Opiekunami są czynni nauczyciele, instruktorzy sportowi i lektorzy językowi, a nad całością czuwa kierownik obozu. Jeśli tylko możemy, jedziemy osobiście.</p>
-<p class="lead">Na naszych obozach bywają też uczestnicy z Francji, Belgii, USA czy Anglii, więc francuski i angielski słychać na co dzień, nie tylko na zajęciach.</p>
-</div><div><ul class="pod-k"><li><b>Kontakt do kierownika od dnia zapisu</b><span>możecie dzwonić i pytać przed obozem i w jego trakcie</span></li><li><b>Telefony o stałych porach</b><span>kontakt z rodzicami jest ważny, ale przyjechaliśmy się bawić z rówieśnikami</span></li><li><b>Zawsze pod opieką kadry</b><span>uczestnicy nie wychodzą sami z hotelu, zwiedzamy i plażujemy razem</span></li><li><b>Faktura za wyjazd dziecka</b><span>po pełnej wpłacie wystarczy mail z prośbą</span></li></ul></div></div></section>
-<section class="sek szary" aria-labelledby="h-dk"><div class="wrap dwie"><div><h2 id="h-dk">Dokumenty do pobrania</h2><p class="lead">Kartę kwalifikacyjną i regulamin trzeba dostarczyć przed wyjazdem. Pytania o gotowość dziecka do wyjazdu? Napiszcie, chętnie doradzimy.</p></div><div><ul class="pliki"><li><a href="https://salutvoyages.pl/pdf/karta-kwalifikacyjna.pdf" rel="noopener">Karta kwalifikacyjna uczestnika<span>PDF</span></a></li><li><a href="https://salutvoyages.pl/pdf/regulamin_obozow_kolonii_Salut.pdf" rel="noopener">Regulamin obozów i kolonii<span>PDF</span></a></li><li><a href="https://salutvoyages.pl/pdf/zgoda-na-wyjazd.pdf" rel="noopener">Zgoda rodzica na wyjazd<span>PDF</span></a></li></ul></div></div></section><section class="cta"><div class="wrap"><div><h2>Nie widzisz swojego kierunku?</h2><p>Nie mamy katalogu gotowych ofert. Napisz, kto jedzie, kiedy i co chcecie zobaczyć - przygotujemy program i wycenę dla Was.</p></div><a class="btn bia" href="../kontakt/">Zapytaj o wyjazd</a></div></section>
+<section class="ph" aria-labelledby="h1"><div class="wrap"><div><nav class="okr" aria-label="Okruszki"><a href="../">Strona główna</a><span aria-hidden="true">/</span><b>Dla Ciebie</b></nav><h1 id="h1">Wyjazdy dla Ciebie</h1><p class="lead">Nie musisz być grupą, żeby jechać z nami. Weekend w mieście, SPA, mecz albo winnica - powiedz, czego oczekujesz, a my zajmiemy się resztą.</p><div class="akcja"><a class="btn" href="../zapytaj/">Zapytaj o wyjazd</a></div><nav class="spis" aria-label="Na tej stronie"><a href="#spa">Wyjazdy SPA</a><a href="#city-break">City break</a><a href="#sport">Imprezy sportowe</a><a href="#kulinarne">Wyjazdy kulinarne</a><a href="#enoturystyka">Enoturystyka</a><a href="#hotele">Rezerwacje hoteli</a><a href="#parki">Parki rozrywki</a></nav></div><figure class="zdj"><img src="../img/w-sagrada-700.webp" srcset="../img/w-sagrada-700.webp 700w, ../img/w-sagrada-1200.webp 1200w, ../img/w-sagrada-1800.webp 1800w" sizes="(max-width:900px) 92vw, 46vw" width="700" height="526" alt="Sklepienie bazyliki Sagrada Família w Barcelonie" fetchpriority="high"><figcaption class="kred">fot. Alvesgaspar, CC BY-SA 4.0, Wikimedia Commons</figcaption></figure></div></section><section class="sek blok szary" id="spa" aria-labelledby="h-spa"><div class="wrap dwie"><div><h2 id="h-spa">Wyjazdy SPA</h2><p class="lead">Luksusowy wyjazd SPA za granicą albo kilka dni w polskim uzdrowisku z tężniami i zabiegami. Dobieramy hotel pod Twoje oczekiwania, nie z katalogu.</p><ul class="pod-k"><li><b>SPA w Polsce i za granicą</b><span>hotele butikowe i renomowane resorty</span></li><li><b>Uzdrowiska</b><span>odpoczynek połączony z zabiegami</span></li></ul></div><figure><img src="../img/a-istria-basen-700.webp" srcset="../img/a-istria-basen-700.webp 700w, ../img/a-istria-basen-1200.webp 1200w" sizes="(max-width:1000px) 92vw, 46vw" width="700" height="408" loading="lazy" alt="Basen hotelowy z widokiem na morze"></figure></div></section><section class="sek blok lewo" id="city-break" aria-labelledby="h-city-break"><div class="wrap dwie"><div><h2 id="h-city-break">City break</h2><p class="lead">Croissant z widokiem na wieżę Eiffla, kawa Illy w Trieście, pizza w Neapolu albo koncert w Wiedniu. Krótki wyjazd, który ładuje baterie - indywidualnie i dla grup.</p><ul class="pod-k"><li><b>Nicea i Francuska Riwiera</b></li><li><b>Paryż i Disneyland</b></li><li><b>Amsterdam</b><span>ze sztuką w tle</span></li><li><b>Berlin i Poczdam</b></li><li><b>Rzym, Mediolan, Bari</b></li><li><b>Budapeszt, Praga, Wiedeń</b></li><li><b>Kopenhaga i Malmö</b></li></ul></div><figure><img src="../img/w-nicea-700.webp" srcset="../img/w-nicea-700.webp 700w, ../img/w-nicea-1200.webp 1200w, ../img/w-nicea-1732.webp 1732w" sizes="(max-width:1000px) 92vw, 46vw" width="700" height="525" loading="lazy" alt="Panorama Nicei ze Wzgórza Zamkowego"><figcaption class="kred">fot. Spike, CC BY-SA 4.0, Wikimedia Commons</figcaption></figure></div></section><section class="sek blok szary" id="sport" aria-labelledby="h-sport"><div class="wrap dwie"><div><h2 id="h-sport">Imprezy sportowe</h2><p class="lead">Bilety na turnieje tenisowe ATP i WTA, mecze piłkarskie za granicą, Formułę 1 i turnieje golfowe. Współpracujemy bezpośrednio z organizatorami, a na życzenie układamy cały wyjazd: bilety, transport, transfery i noclegi.</p><ul class="pod-k"><li><b>Tenis i golf</b></li><li><b>Piłka nożna</b></li><li><b>Formuła 1</b></li><li><b>Koszykówka i siatkówka</b></li></ul></div><figure><img src="../img/w-londyn-700.webp" srcset="../img/w-londyn-700.webp 700w, ../img/w-londyn-1200.webp 1200w, ../img/w-londyn-1800.webp 1800w" sizes="(max-width:1000px) 92vw, 46vw" width="700" height="467" loading="lazy" alt="Lew przy moście Westminster w Londynie"><figcaption class="kred">fot. Dietmar Rabich, CC BY-SA 4.0, Wikimedia Commons</figcaption></figure></div></section><section class="sek blok lewo" id="kulinarne" aria-labelledby="h-kulinarne"><div class="wrap dwie"><div><h2 id="h-kulinarne">Wyjazdy kulinarne</h2><p class="lead">Warsztaty kulinarne we Włoszech, kolacja w restauracji z gwiazdkami Michelin, targi i lokalne produkty prosto od rolników. Podróż, którą się smakuje.</p><ul class="pod-k"><li><b>Warsztaty kulinarne</b><span>Włochy i Francja</span></li><li><b>Restauracje z gwiazdkami Michelin</b><span>rezerwacje stolików</span></li><li><b>Szlaki gastronomii</b><span>sery, oliwa, makaron i pizza</span></li></ul></div><figure><img src="../img/f-sacre-600.webp" srcset="../img/f-sacre-600.webp 600w, ../img/f-sacre-900.webp 900w, ../img/f-sacre-1200.webp 1200w" sizes="(max-width:1000px) 92vw, 46vw" width="600" height="800" loading="lazy" alt="Bazylika Sacré-Coeur na Montmartre"></figure></div></section><section class="sek blok szary" id="enoturystyka" aria-labelledby="h-enoturystyka"><div class="wrap dwie"><div><h2 id="h-enoturystyka">Enoturystyka</h2><p class="lead">Przepiękne winnice, nieziemskie krajobrazy i wytworne smaki. Nasze szlaki prowadzą przez tajniki wina i wykwintnej gastronomii - od Burgundii i Alzacji po Istrię.</p><ul class="pod-k"><li><b>Szlak win Francji</b><span>Burgundia, Alzacja, Akwitania, Prowansja</span></li><li><b>Tasting tour</b><span>degustacje z lokalnymi produktami</span></li><li><b>Włochy i Istria</b><span>Toskania, Piemont, malwazja z Istrii</span></li></ul></div><figure><img src="../img/a-istria-700.webp" srcset="../img/a-istria-700.webp 700w, ../img/a-istria-1200.webp 1200w, ../img/a-istria-1800.webp 1800w" sizes="(max-width:1000px) 92vw, 46vw" width="700" height="417" loading="lazy" alt="Plaża i morze na Istrii"></figure></div></section><section class="sek blok lewo" id="hotele" aria-labelledby="h-hotele"><div class="wrap dwie"><div><h2 id="h-hotele">Rezerwacje hoteli</h2><p class="lead">Hotel przez nasze biuro to dobra cena, pewna rezerwacja i obiekt dobrany do Twoich oczekiwań. Proponujemy hotele butikowe, klimatyczne i ekskluzywne, ale też hotele renomowanych sieci i apartamenty wakacyjne - dla osób prywatnych i firm.</p><ul class="pod-k"><li><b>Hotele butikowe i ekskluzywne</b></li><li><b>Hotele sieciowe</b><span>dla wyjazdów służbowych</span></li><li><b>Apartamenty wakacyjne</b></li></ul></div><figure><img src="../img/a-amsterdam-700.webp" srcset="../img/a-amsterdam-700.webp 700w, ../img/a-amsterdam-1200.webp 1200w, ../img/a-amsterdam-1800.webp 1800w" sizes="(max-width:1000px) 92vw, 46vw" width="700" height="467" loading="lazy" alt="Kamienice nad kanałem w Amsterdamie"></figure></div></section><section class="sek blok szary" id="parki" aria-labelledby="h-parki"><div class="wrap dwie"><div><h2 id="h-parki">Parki rozrywki</h2><p class="lead">Jesteśmy oficjalnymi partnerami największych parków rozrywki w Polsce i w Europie, więc noclegi na terenie parku i bilety rezerwujecie bezpośrednio u nas.</p><ul class="pod-k"><li><b>Disneyland Paris i Park Asterix</b></li><li><b>Legoland, Gardaland, Mirabilandia</b></li><li><b>Energylandia, Suntago, Tropical Islands</b></li></ul></div><div class="ramka"><h3>Bilety i noclegi w parku</h3><p>Rezerwujesz bezpośrednio u nas, w najlepszych cenach - także pakiety dla klas i grup.</p><a class="btn" href="../zapytaj/">Zapytaj o park</a></div></div></section><section class="sek" id="takze" aria-labelledby="h-takze"><div class="wrap dwie"><div><h2 id="h-takze">A do tego</h2><p class="lead" style="color:var(--mut);margin-top:16px">Wszystko, co sprawia, że podróż jest dopięta na ostatni guzik.</p></div>
+<div><ul class="pod-k"><li><b>Wyjazdy narciarskie</b><span>Alpy dla rodzin i znajomych</span></li><li><b>Ubezpieczenia turystyczne</b><span>także od rezygnacji</span></li><li><b>Wynajem samochodów i transfery</b></li><li><b>Conciergerie</b><span>stolik w restauracji, bilety do teatru i opery</span></li><li><b>Śluby i podróże poślubne</b><span>także ślub we francuskim zamku</span></li></ul></div></div></section><section class="cta"><div class="wrap"><div><h2>Gdzie chcesz pojechać?</h2><p>Napisz, dokąd i kiedy - przygotujemy propozycję szytą na miarę.</p></div><a class="btn bia" href="../zapytaj/">Zapytaj o wyjazd</a></div></section>
 </main>
 <footer class="stopka">
   <svg class="szew" viewBox="0 0 1600 60" preserveAspectRatio="none" aria-hidden="true"><path d="M0 8C260 8 380 52 640 44S1040 6 1280 18 1520 40 1600 30" fill="none" stroke="currentColor" stroke-width="3" stroke-dasharray="14 10"/></svg>
@@ -541,16 +669,16 @@ a.zn:hover b{color:var(--red)}
     <div class="st-g">
       <div>
         <a class="logo" href="../" aria-label="Salut Voyages, strona główna"><svg aria-hidden="true"><use href="#logo"/></svg></a>
-        <p class="o">Biuro podróży z Warszawy, od 2006 roku. Wycieczki szkolne do Francji i krajów francuskojęzycznych, wyjazdy dla młodzieży, grup i firm - bez katalogu, od zera pod Waszą grupę.</p>
+        <p class="o">Biuro podróży z Warszawy, od 2006 roku. Wycieczki szkolne do Francji i po całej Europie, wyjazdy dla firm, grup i osób prywatnych - bez katalogu, od zera pod Was.</p>
       </div>
-      <div><h3>Wycieczki</h3><ul><li><a href="../dla-szkol/">Dla szkół</a></li><li><a href="../dla-firm-i-grup/">Dla firm i grup</a></li><li><a href="../dla-ciebie/">Dla Ciebie</a></li><li><a href="../pielgrzymki/">Pielgrzymki</a></li><li><a href="../kierunki/">Kierunki</a></li></ul></div>
+      <div><h3>Oferta</h3><ul><li><a href="../oferta/">Oferta</a></li><li><a href="../dla-szkol/">Dla szkół</a></li><li><a href="../dla-firm/">Dla firm</a></li><li><a href="../dla-grup/">Dla grup</a></li><li><a href="../dla-ciebie/">Dla Ciebie</a></li><li><a href="../aktualne-wyjazdy/">Aktualne wyjazdy</a></li></ul></div>
       <div><h3>Informacje</h3><ul><li><a href="../o-nas/">O nas</a></li><li><a href="../bezpieczenstwo/">Bezpieczeństwo</a></li><li><a href="../opinie/">Opinie</a></li><li><a href="../dokumenty-i-gwarancje/">Dokumenty i gwarancje</a></li><li><a href="../polityka-prywatnosci/">Polityka prywatności</a></li></ul></div>
-      <div><h3>Kontakt</h3><ul><li><a href="tel:+48226143302">22 614 33 02</a></li><li><a href="mailto:info@salutvoyages.pl">info@salutvoyages.pl</a></li><li>ul. Zbożowa 13</li><li>03-253 Warszawa</li><li><a href="https://www.facebook.com/salut.voyages" rel="noopener">Facebook</a></li></ul></div>
+      <div><h3>Kontakt</h3><ul><li><a href="tel:+48512454040">512 45 40 40</a></li><li><a href="tel:+48226143302">22 614 33 02</a></li><li><a href="mailto:info@salutvoyages.pl">info@salutvoyages.pl</a></li><li>ul. Zbożowa 13, 03-253 Warszawa</li><li><a href="https://www.facebook.com/salut.voyages" rel="noopener">Facebook</a></li></ul></div>
     </div>
     <div class="st-d"><span>© <span id="rok">2026</span> Salut Voyages</span><span>Organizator turystyki nr 910 w rejestrze Marszałka Województwa Mazowieckiego · gwarant: SIGNAL IDUNA</span></div>
   </div>
 </footer>
-<nav class="mob" id="mob" aria-label="Szybki kontakt"><a href="tel:+48226143302"><svg aria-hidden="true"><use href="#i-tel"/></svg>Zadzwoń</a><a href="../kontakt/">Zapytaj o wyjazd</a></nav>
+<nav class="mob" id="mob" aria-label="Szybki kontakt"><a href="tel:+48512454040"><svg aria-hidden="true"><use href="#i-tel"/></svg>Zadzwoń</a><a href="../zapytaj/">Zapytaj o wyjazd</a></nav>
 <div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Powiększone zdjęcie">
   <button class="x" type="button" aria-label="Zamknij"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 5l14 14M19 5 5 19" stroke="currentColor" stroke-width="2.4"/></svg></button>
   <button class="p" type="button" aria-label="Poprzednie"><svg aria-hidden="true"><use href="#i-l"/></svg></button>

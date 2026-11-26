@@ -63,12 +63,27 @@
   var f=document.getElementById('form'),msg=document.getElementById('msg');
   if(f)f.addEventListener('submit',function(e){e.preventDefault();var ok=true;[].forEach.call(f.querySelectorAll('[required]'),function(i){var v=i.type==='checkbox'?(i.checked?'1':''):i.value.trim();var bad=!v||(i.type==='email'&&!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(v));i.setAttribute('aria-invalid',bad);if(bad&&ok){ok=false;i.focus()}});if(!ok)return;msg.hidden=false;f.reset()});
 
-  /* menu rozwijane Wycieczki: klik (dotyk na tablecie), Escape i klik obok zamykaja */
-  var sub=document.querySelector('.menu .sub');
-  if(sub){var sb=sub.querySelector('button');
-    sb.addEventListener('click',function(e){if(innerWidth<=1080)return;var o=sub.classList.toggle('otw');sb.setAttribute('aria-expanded',o)});
-    document.addEventListener('click',function(e){if(!sub.contains(e.target)){sub.classList.remove('otw');sb.setAttribute('aria-expanded','false')}});
-    document.addEventListener('keydown',function(e){if(e.key==='Escape'){sub.classList.remove('otw');sb.setAttribute('aria-expanded','false')}});
+  /* menu: grupy rozwijane (klik w strzalke, na telefonie akordeon), Escape i klik obok zamykaja */
+  var subs=[].slice.call(document.querySelectorAll('.menu .sub'));
+  function zwin(x){x.classList.remove('otw');var b=x.querySelector('.rozw');if(b)b.setAttribute('aria-expanded','false')}
+  subs.forEach(function(x){var b=x.querySelector('.rozw');
+    b.addEventListener('click',function(e){e.stopPropagation();var o=!x.classList.contains('otw');subs.forEach(zwin);if(o){x.classList.add('otw');b.setAttribute('aria-expanded','true')}});
+  });
+  document.addEventListener('click',function(e){subs.forEach(function(x){if(!x.contains(e.target)&&innerWidth>1240)zwin(x)})});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')subs.forEach(zwin)});
+
+  /* planer zapytania: bilet obok uzupelnia sie na zywo */
+  var pf=document.getElementById('form'),bt=document.getElementById('b-tyt');
+  if(pf&&bt){
+    function v(n){var x=pf.querySelector('input[name="'+n+'"]:checked');return x?x.value:''}
+    function os(n){n=+n||0;return n+' '+(n===1?'osoba':(n%10>=2&&n%10<=4&&(n%100<12||n%100>14)?'osoby':'osób'))}
+    function dn(n){n=+n||0;return n+' '+(n===1?'dzień':'dni')}
+    function upd(){var k=v('kto'),d=v('dokad'),o=pf.querySelector('#p-os').value,dd=pf.querySelector('#p-dni').value,m=pf.querySelector('#p-kiedy').value;
+      var ml=m==='Termin elastyczny'?'termin elastyczny':m.toLowerCase();
+      bt.textContent=k+', '+os(o)+' - '+dn(dd)+', '+d+', '+ml;
+      document.getElementById('b-kto').textContent=k;document.getElementById('b-dokad').textContent=d;
+      document.getElementById('b-os').textContent=os(o);document.getElementById('b-kiedy').textContent=m+' · '+dn(dd)}
+    pf.addEventListener('input',upd);pf.addEventListener('change',upd);upd();
   }
 
   /* filtry listy ofert */
